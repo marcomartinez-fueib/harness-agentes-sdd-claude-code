@@ -1,4 +1,4 @@
-# Arnés de agentes con Spec Driven Development
+# Arnés de agentes SDD para Claude Code
 
 Plantilla para programar con **Claude Code** usando un equipo de subagentes
 coordinados y un flujo **SDD** (*Spec Driven Development*): primero se escribe
@@ -9,6 +9,14 @@ un revisor automático compruebe que cada requisito está cubierto por un test.
 Es el esqueleto de un sistema que uso a diario en un proyecto real
 (Django + React, más de 80 features entregadas así), sin el código del producto
 y con un ejemplo mínimo en Python para que funcione desde el primer clon.
+
+> 🔀 **Hay dos versiones de esta plantilla:**
+> - **Esta**, para Claude Code (de pago, la más fiable siguiendo el protocolo).
+> - [`harness-agentes-sdd-opencode`](https://github.com/marcomartinez-fueib/harness-agentes-sdd-opencode),
+>   para [opencode](https://opencode.ai) con **modelos gratuitos**.
+>
+> El flujo, las specs, el backlog y la documentación son idénticos; solo
+> cambia la capa que conecta con la herramienta.
 
 ---
 
@@ -78,7 +86,7 @@ Tres principios sostienen todo:
 ```bash
 # 1. Crea tu repo a partir de esta plantilla (botón "Use this template" en
 #    GitHub) o clónalo directamente:
-git clone https://github.com/marcomartinez-fueib/harness-agentes-sdd.git mi-proyecto
+git clone https://github.com/marcomartinez-fueib/harness-agentes-sdd-claude-code.git mi-proyecto
 cd mi-proyecto
 
 # 2. Comprueba que el entorno está sano (también activa el hook pre-push):
@@ -424,8 +432,10 @@ cazan antes. Para cambios triviales usa `"sdd": false`.
 Sí. Nada del flujo depende de Python; solo el ejemplo y el comando de tests.
 Ver [Adaptarlo a tu proyecto](#adaptarlo-a-tu-proyecto).
 
-**¿Y con otros agentes (Cursor, Codex, Gemini CLI…)?**
-`AGENTS.md`, las specs, el backlog y `progress/` son Markdown/JSON plano y
+**¿Y con opencode u otros agentes (Cursor, Codex, Gemini CLI…)?**
+Para opencode hay una versión lista:
+[`harness-agentes-sdd-opencode`](https://github.com/marcomartinez-fueib/harness-agentes-sdd-opencode).
+Para los demás, `AGENTS.md`, las specs, el backlog y `progress/` son Markdown/JSON plano y
 sirven para cualquiera. Lo específico de Claude Code es `CLAUDE.md`,
 `.claude/agents/` (subagentes) y `.claude/settings.json` (hooks).
 
