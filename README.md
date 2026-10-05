@@ -78,7 +78,7 @@ Tres principios sostienen todo:
 ```bash
 # 1. Crea tu repo a partir de esta plantilla (botón "Use this template" en
 #    GitHub) o clónalo directamente:
-git clone https://github.com/<usuario>/harness-agentes-sdd.git mi-proyecto
+git clone https://github.com/marcomartinez-fueib/harness-agentes-sdd.git mi-proyecto
 cd mi-proyecto
 
 # 2. Comprueba que el entorno está sano (también activa el hook pre-push):
