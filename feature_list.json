@@ -1,0 +1,39 @@
+{
+  "project": "mi-proyecto",
+  "description": "Describe aquí tu proyecto en una línea.",
+  "rules": {
+    "one_feature_at_a_time": true,
+    "require_tests_to_close": true,
+    "require_approved_spec_to_implement": true,
+    "valid_status": ["pending", "spec_ready", "in_progress", "done", "blocked"],
+    "sdd_required_when": "feature has \"sdd\": true"
+  },
+  "features": [
+    {
+      "id": 1,
+      "name": "saludo",
+      "title": "Función de saludo",
+      "description": "Función que devuelve un saludo personalizado. Ejemplo ya terminado para que veas cómo queda una feature 'done'.",
+      "acceptance": [
+        "saludar('Ana') devuelve 'Hola, Ana!'",
+        "Si el nombre está vacío o solo tiene espacios, lanza ValueError"
+      ],
+      "status": "done",
+      "sdd": true
+    },
+    {
+      "id": 2,
+      "name": "contador-palabras",
+      "title": "Contador de palabras",
+      "description": "Función que cuenta cuántas veces aparece cada palabra en un texto. Úsala para probar el flujo completo de principio a fin.",
+      "acceptance": [
+        "Ignora mayúsculas/minúsculas ('Hola' y 'hola' son la misma palabra)",
+        "Ignora signos de puntuación",
+        "Un texto vacío devuelve un diccionario vacío",
+        "Devuelve un dict {palabra: número de apariciones}"
+      ],
+      "status": "pending",
+      "sdd": true
+    }
+  ]
+}

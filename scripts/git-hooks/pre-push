@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# pre-push — gate local: no sale código a remoto si ./init.sh está rojo.
+# Se activa solo al ejecutar ./init.sh (core.hooksPath=scripts/git-hooks).
+# Escape de emergencia: git push --no-verify
+set -u
+echo "pre-push: ejecutando ./init.sh..."
+if ! ./init.sh >/dev/null 2>&1; then
+    echo "pre-push: ⛔ ./init.sh falla. Ejecútalo para ver el error. Push bloqueado." >&2
+    exit 1
+fi
+echo "pre-push: ✓ verde"
